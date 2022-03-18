@@ -24,8 +24,8 @@
                 android:gravity="center_horizontal"
                 android:padding="4dp"
                 android:text="Ghana"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textColor="#FFD600"
+                android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/ghana_score"
