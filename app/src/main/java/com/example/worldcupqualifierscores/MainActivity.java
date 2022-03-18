@@ -142,12 +142,16 @@ public class MainActivity extends AppCompatActivity {
     public void resetButton(View view) {
         scoreGhana = 0;
         scoreNigeria = 0;
-        displayForGhana(scoreGhana);
-        displayForNigeria(scoreNigeria);
+        displayForGhana(scoreGhana); //Resets scores for Ghana team
+        displayForNigeria(scoreNigeria); // Resets scores for Nigeria team
         foulsGhana = 0;
         foulsNigeria = 0;
-        displayFoulsGhana(foulsGhana);
-        displayFoulsNigeria(foulsNigeria);
+        displayFoulsGhana(foulsGhana); // Resets fouls for Ghana team
+        displayFoulsNigeria(foulsNigeria); // Resets fouls for Nigeria team
+        shotsGhana = 0;
+        shotsNigeria = 0;
+        displayShotsGhana(shotsGhana); // Resets shots on target for Ghana team
+        displayShotsNigeria(shotsNigeria); // Resets shots on target for Nigeria team
     }
 
 
