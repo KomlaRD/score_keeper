@@ -121,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
         scoreNigeria = 0;
         displayForGhana(scoreGhana);
         displayForNigeria(scoreNigeria);
+        foulsGhana = 0;
+        foulsNigeria = 0;
+        displayFoulsGhana(foulsGhana);
+        displayFoulsNigeria(foulsNigeria);
     }
 
 
