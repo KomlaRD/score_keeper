@@ -8,11 +8,17 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    //Tracks scores for Team A
+    //Tracks scores for Ghana
     int scoreGhana = 0;
 
-    // Tracks scores for Team B
+    // Tracks scores for Nigeria
     int scoreNigeria = 0;
+
+    // Tracks fouls for Ghana
+    int foulsGhana = 0;
+
+    // Tracks fouls for Nigeria
+    int foulsNigeria = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Ghana.
      */
     public void displayForGhana(int score) {
         TextView scoreView = (TextView) findViewById(R.id.ghana_score);
@@ -37,6 +43,22 @@ public class MainActivity extends AppCompatActivity {
         displayForGhana(scoreGhana);
     }
 
+    /**
+     * Displays fouls for Ghana.
+     */
+    public void displayFoulsGhana(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.ghana_fouls);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * This method is called when fouls button for Ghana is clicked
+     */
+    public void numberOfFouls(View view) {
+        foulsGhana = foulsGhana + 1;
+        displayFoulsGhana(foulsGhana);
+    }
+
 
     /**
      * This method is called when the number of ghana shots button is clicked
@@ -46,13 +68,8 @@ public class MainActivity extends AppCompatActivity {
         displayForGhana(scoreGhana);
     }
 
-    /**
-     * This method is called when the free throw button is clicked
-     */
-    public void numberOfFouls(View view) {
-        scoreGhana = scoreGhana + 1;
-        displayForGhana(scoreGhana);
-    }
+
+
 
     /**
      * Displays the given score for Nigeria.
@@ -62,12 +79,21 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+
     /**
-     * This method is called when the +3 button is clicked
+     * This method is called when the goal button for Nigeria is clicked
      */
     public void nigeriaGoal(View view) {
         scoreNigeria = scoreNigeria + 1;
         displayForNigeria(scoreNigeria);
+    }
+
+    /**
+     * Displays fouls for Nigeria.
+     */
+    public void displayFoulsNigeria(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.nigeria_fouls);
+        scoreView.setText(String.valueOf(score));
     }
 
 
@@ -75,12 +101,12 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the nigeria fouls button is clicked
      */
     public void nigeriaFouls(View view) {
-        scoreNigeria = scoreNigeria + 1;
-        displayForNigeria(scoreNigeria);
+        foulsNigeria = foulsNigeria + 1;
+        displayFoulsNigeria(foulsNigeria);
     }
 
     /**
-     * This method is called when the nigeria sgots on target button is clicked
+     * This method is called when the nigeria shots on target button is clicked
      */
     public void nigeriaShotsOnTarget(View view) {
         scoreNigeria= scoreNigeria + 1;
@@ -96,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
         displayForGhana(scoreGhana);
         displayForNigeria(scoreNigeria);
     }
+
+
+
+
 
 
 
