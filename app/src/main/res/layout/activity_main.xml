@@ -166,7 +166,8 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="nigeriaGoal"
-                android:text="goals" />
+                android:text="goals"
+                android:textColor="#00E676"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -175,7 +176,8 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="nigeriaFouls"
-                android:text="fouls" />
+                android:text="fouls"
+                android:textColor="#00E676"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -184,7 +186,8 @@
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="nigeriaShotsOnTarget"
-                android:text="shots" />
+                android:text="shots"
+                android:textColor="#00E676"/>
         </LinearLayout>
 
 
