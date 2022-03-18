@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
     // Tracks fouls for Nigeria
     int foulsNigeria = 0;
 
+    // Tracks shots on target for Ghana
+    int shotsGhana = 0;
+
+    // Tracks shots on target for Nigeria
+    int shotsNigeria = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +67,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
+     * Displays shots on target for Ghana.
+     */
+    public void displayShotsGhana(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.ghana_shots);
+        scoreView.setText(String.valueOf(score));
+    }
+
+
+    /**
      * This method is called when the number of ghana shots button is clicked
      */
     public void numberOfShots(View view) {
-        scoreGhana = scoreGhana + 1;
-        displayForGhana(scoreGhana);
+        shotsGhana = shotsGhana + 1;
+        displayShotsGhana(shotsGhana);
     }
 
 
@@ -106,11 +121,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Displays shots on target  for Nigeria.
+     */
+    public void displayShotsNigeria(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.nigeria_shots);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
      * This method is called when the nigeria shots on target button is clicked
      */
     public void nigeriaShotsOnTarget(View view) {
-        scoreNigeria= scoreNigeria + 1;
-        displayForNigeria(scoreNigeria);
+        shotsNigeria= shotsNigeria + 1;
+        displayShotsNigeria(shotsNigeria);
     }
 
     /**
